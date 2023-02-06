@@ -34,7 +34,7 @@
                     "type" : "git",
                     "url" : "https://github.com/alexkdeveloper/radio.git",
                     "tag": "1.0.3",
-                    "commit": "90667f5d559a42a89e40a5528c49ed6dded4036d"
+                    "commit": "d79b95c28d9e00b24340394a3ed53e7036a11a5e"
                 }
             ]
         }
