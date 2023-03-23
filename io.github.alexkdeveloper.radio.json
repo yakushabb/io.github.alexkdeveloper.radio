@@ -1,7 +1,7 @@
 {
   "app-id": "io.github.alexkdeveloper.radio",
   "runtime": "org.gnome.Platform",
-  "runtime-version": "43",
+  "runtime-version": "44",
   "sdk": "org.gnome.Sdk",
   "command": "io.github.alexkdeveloper.radio",
   "finish-args": [
@@ -26,6 +26,24 @@
   ],
   "modules": [
      {
+            "name": "libsoup-2.4",
+            "buildsystem": "meson",
+            "config-opts": [
+                "-Dvapi=disabled",
+                "-Dtests=false",
+                "-Dtls_check=false",
+                "-Dntlm=disabled",
+                "-Dsysprof=enabled"
+            ],
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://gitlab.gnome.org/GNOME/libsoup.git",
+                    "commit": "b0e2d85e36c5a9ee8d4caf16dbdc30302fcf470d"
+                }
+            ]
+        },
+     {
         "name": "Radio",
             "builddir": true,
             "buildsystem": "meson",
@@ -33,7 +51,7 @@
                 {
                     "type": "git",
                     "url": "https://github.com/alexkdeveloper/radio.git",
-                    "tag": "1.0.6"
+                    "tag": "1.0.7"
                 }
             ]
         }
